@@ -21,6 +21,7 @@ interface GitHubRepo {
   homepage?: string;
 }
 type Dictionary = typeof siteConfig.translations.pt;
+
 interface HomePageProps { 
   user: GitHubUser | null;
   repos: GitHubRepo[];
@@ -58,24 +59,24 @@ export default function HomePage({ user, repos, dictionary }: HomePageProps) {
       <Flex as="section" id="hero" w="100%" minH={{ base: 'auto', md: 'calc(80vh)' }} align="center" justify="center" py={20}>
           <VStack spacing={6} textAlign="center">
               <Avatar size="2xl" name={user.name} src={user.avatar_url} border="4px solid" borderColor="purple.400" />
-              <TextDecryptOnScroll as="h1" fontSize={{ base: '2xl', md: '4xl' }} fontWeight="bold">
+              <TextDecryptOnScroll as="h1" fontSize={{ base: '3xl', md: '4xl' }} fontWeight="bold">
                   {user.name}
               </TextDecryptOnScroll>
-              <TextDecryptOnScroll fontSize={{ base: 'lg', md: '2xl' }} color="purple.300">
+              <TextDecryptOnScroll fontSize={{ base: 'md', md: '2xl' }} color="purple.300">
                   {dictionary.title}
               </TextDecryptOnScroll>
-              <HStack spacing={4} pt={4}>
-                  <Button as={Link} href="#contact" colorScheme="purple" size="lg">
-                <TextDecryptOnScroll as="span">
-                    {dictionary.ui.heroContactBtn}
-                </TextDecryptOnScroll>
-                </Button>
-                  <Button as={Link} href={dictionary.resume} download variant="outline" colorScheme="purple" size="lg">
-                  <TextDecryptOnScroll as="span">
-                    {dictionary.ui.heroDownloadCvBtn}
-                  </TextDecryptOnScroll>
+              <VStack spacing={4} pt={4} w="full" maxW="320px" mx="auto">
+                  <Button as={Link} href="#contact" colorScheme="purple" size={{ base: 'md', md: 'lg' }} w="full">
+                    <TextDecryptOnScroll as="span">
+                        {dictionary.ui.heroContactBtn}
+                    </TextDecryptOnScroll>
                   </Button>
-              </HStack>
+                  <Button as={Link} href={dictionary.resume} download variant="outline" colorScheme="purple" size={{ base: 'md', md: 'lg' }} w="full">
+                    <TextDecryptOnScroll as="span">
+                        {dictionary.ui.heroDownloadCvBtn}
+                    </TextDecryptOnScroll>
+                  </Button>
+              </VStack>
           </VStack>
       </Flex>
 
@@ -120,9 +121,9 @@ export default function HomePage({ user, repos, dictionary }: HomePageProps) {
             ))}
          </SimpleGrid>
          <Button as={NextLink} href="/projects" variant="solid" colorScheme="purple" size="lg" mt={8}>
-         <TextDecryptOnScroll as="span">
-            {dictionary.ui.allProjectsBtn}
-         </TextDecryptOnScroll>
+            <TextDecryptOnScroll as="span">
+                {dictionary.ui.allProjectsBtn}
+            </TextDecryptOnScroll>
          </Button>
       </VStack>
 
@@ -135,10 +136,10 @@ export default function HomePage({ user, repos, dictionary }: HomePageProps) {
                   <TextDecryptOnScroll as="h3" fontSize={{ base: 'xl', md: '2xl' }} fontWeight="bold">
                     {dictionary.ui.aboutSubtitle}
                   </TextDecryptOnScroll>
-                  {dictionary.aboutMe.map(about => (
-                    <span key={about} color="gray.300">
-                    {about}
-                    </span>
+                  {dictionary.aboutMe.map((paragraph, index) => (
+                    <TextDecryptOnScroll key={index} color="gray.300">
+                      {paragraph}
+                    </TextDecryptOnScroll>
                   ))}
               </VStack>
               <Box flex="1.5" w="100%">
