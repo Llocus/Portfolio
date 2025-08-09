@@ -122,12 +122,14 @@ export const siteConfig: SiteConfig = {
     pt: {
       metadata: {
         title: "Victor Hugo Camerro - Desenvolvedor FullStack",
-        description: "Portfólio de Victor Hugo Camerro.",
+        description: "Portfólio de Victor Hugo Camerro",
       },
       title: "Desenvolvedor FullStack | Engenheiro de Software",
       aboutMe: [
-        "Como um engenheiro de software dedicado, sou apaixonado pela arte de codificar e pela ciência de resolver problemas. Com uma base sólida em ciência da computação e uma abordagem criativa, eu me esforço para transformar ideias complexas em soluções elegantes, funcionais e com ótima experiência de usuário.",
-        "Minha trajetória inclui desde projetos de automação como freelancer até o desenvolvimento de sistemas robustos em ambientes corporativos, utilizando stacks modernas e práticas de DevOps. Estou sempre em busca de novos desafios e tecnologias para aprender."
+        "Engenheiro de software, muito dedicado e apaixonado pela arte da codificação, na busca de soluções aos problemas.",
+        "Com base sólida na Ciência da Computação e muita criativa, tenho como desafios transformar problemas em soluções.",
+        "Minha trajetória vai de projetos de automação, como freelancer, a desenvolvimento de sistemas robustos em ambientes corporativos; mediante stacks modernas e DevOps.",
+        "Ciente dos novos desafios tecnológicos, vivo incessantemente em busca de novos conhecimentos."
       ],
       resume: "/Curriculo_Victor.pdf",
       experiences: [
@@ -181,12 +183,14 @@ export const siteConfig: SiteConfig = {
     en: {
        metadata: {
         title: "Victor Hugo Camerro - FullStack Developer",
-        description: "Portfolio of Victor Hugo Camerro.",
+        description: "Portfolio of Victor Hugo Camerro",
       },
       title: "FullStack Developer | Software Engineer",
       aboutMe: [
-        "As a dedicated software engineer, I am passionate about the art of coding and the science of problem-solving. With a solid foundation in computer science and a creative approach to development, I strive to turn complex ideas into elegant, functional, and user-friendly solutions.",
-        "My journey includes everything from automation projects as a freelancer to developing robust systems in corporate environments using modern stacks and DevOps practices. I am always looking for new challenges and technologies to learn."
+        "A software engineer, dedicated and passionate about the art of coding, I strive to find solutions to problems.",
+        "With a solid foundation in Computer Science and a strong creative mind, I embrace the challenges of transforming problems into solutions.",
+        "My career path ranges from automation projects as a freelancer to developing robust systems in corporate environments using modern stacks and DevOps.",
+        "Aware of new technological challenges, I'm constantly seeking new knowledge."
       ],
       resume: "/Resume_Victor.pdf",
       experiences: [
