@@ -16,12 +16,11 @@ interface MobileNavProps {
 }
 
 export const MobileNav = ({ lang, uiTranslations }: MobileNavProps) => {
-
   const navItems = [
-    { label: uiTranslations.navHome, icon: FaHome, href: '/' },
-    { label: uiTranslations.navProjects, icon: FaBriefcase, href: '/#projects' },
-    { label: uiTranslations.navAbout, icon: FaUser, href: '/#about' },
-    { label: uiTranslations.navResume, icon: FaFileAlt, href: '/resume' },
+    { label: uiTranslations.navHome, icon: FaHome, href: `/${lang}` },
+    { label: uiTranslations.navProjects, icon: FaBriefcase, href: `/${lang}/#projects` },
+    { label: uiTranslations.navAbout, icon: FaUser, href: `/${lang}/#about` },
+    { label: uiTranslations.navResume, icon: FaFileAlt, href: `/${lang}/resume` },
   ];
 
   return (

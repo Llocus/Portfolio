@@ -2,6 +2,10 @@ import { getDictionary, type Locale } from "../../utils/dictionaries";
 import { siteConfig } from "../../data/siteConfig";
 import ProjectsPage from "../../../app/projects-page";
 
+interface PageProps {
+  params: Promise<{ lang: Locale }>;
+}
+
 interface GitHubRepo {
   id: number;
   name: string;
@@ -24,7 +28,10 @@ async function getAllGithubRepos(): Promise<GitHubRepo[]> {
     return res.json();
 }
 
-export default async function ProjetosPage({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function ProjetosPage(props: PageProps) {
+  const resolvedParams = await props.params;
+  const { lang } = resolvedParams;
+  
   const repos = await getAllGithubRepos();
   const dictionary = await getDictionary(lang);
 

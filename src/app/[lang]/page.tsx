@@ -2,16 +2,22 @@ import HomePage from "@/app/home-page";
 import { getDictionary, type Locale } from "../utils/dictionaries";
 import { siteConfig } from "../data/siteConfig";
 
+ interface PageProps {
+    params: Promise<{ lang: Locale }>;
+  }
+
 async function getGithubData() {
   try {
-    const userRes = await fetch(`https://api.github.com/users/${siteConfig.socialLinks.github.split('/').pop()}`, { next: { revalidate: 3600 } });
+    const githubUser = siteConfig.socialLinks.github.split('/').pop();
+
+    const userRes = await fetch(`https://api.github.com/users/${githubUser}`, { next: { revalidate: 3600 } });
     if (!userRes.ok) {
       console.error("Failed to fetch GitHub user:", await userRes.text());
       return { user: null, repos: [] };
     }
     const user = await userRes.json();
 
-    const repoRes = await fetch(`https://api.github.com/users/${siteConfig.socialLinks.github.split('/').pop()}/repos?sort=pushed&per_page=6`, { next: { revalidate: 3600 } });
+    const repoRes = await fetch(`https://api.github.com/users/${githubUser}/repos?sort=pushed&per_page=6`, { next: { revalidate: 3600 } });
     if (!repoRes.ok) {
       console.error("Failed to fetch GitHub repositories:", await repoRes.text());
       return { user, repos: [] };
@@ -24,8 +30,9 @@ async function getGithubData() {
   }
 }
 
-export default async function Page({ params }: { params: { lang: Locale } }) {
-  const { lang } = params;
+export default async function Page(props: PageProps) {
+  const resolvedParams = await props.params;
+  const { lang } = resolvedParams;
   const { user, repos } = await getGithubData();
   const dictionary = await getDictionary(lang);
 

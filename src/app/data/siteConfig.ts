@@ -2,7 +2,7 @@ import { IconType } from 'react-icons';
 import { BiLogoTypescript, BiLogoGoLang } from 'react-icons/bi';
 import { FaPython, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker, FaCode, FaDatabase, FaGitAlt } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
-import { SiTypescript, SiPostgresql, SiGo, SiFlutter, SiKubernetes, SiMongodb } from 'react-icons/si';
+import { SiTypescript, SiPostgresql, SiGo, SiFlutter, SiMongodb } from 'react-icons/si';
 
 interface Experience {
   role: string;
