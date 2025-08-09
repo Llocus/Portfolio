@@ -4,7 +4,7 @@ Bem-vindo ao repositório do meu portfólio pessoal! Este não é apenas um site
 
 A filosofia é simples: um design de alta qualidade que pode ser seu com o mínimo de esforço. **Basta editar um único ficheiro para mudar tudo.**
 
-![placeholder](https://placehold.co/1200x600/0D1117/805AD5?text=Adicione+um+print+do+seu+site+aqui)
+![placeholder](./public/image.png)
 
 ---
 
