@@ -137,9 +137,9 @@ export default function HomePage({ user, repos, dictionary }: HomePageProps) {
                     {dictionary.ui.aboutSubtitle}
                   </TextDecryptOnScroll>
                   {dictionary.aboutMe.map((paragraph, index) => (
-                    <TextDecryptOnScroll key={index} color="gray.300">
+                    <span color="gray.300">
                       {paragraph}
-                    </TextDecryptOnScroll>
+                    </span>
                   ))}
               </VStack>
               <Box flex="1.5" w="100%">
