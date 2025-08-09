@@ -1,10 +1,83 @@
+import { IconType } from 'react-icons';
 import { BiLogoTypescript, BiLogoGoLang } from 'react-icons/bi';
-import { FaGithub, FaLinkedin, FaWhatsapp, FaPython, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker, FaCode, FaDatabase, FaGitAlt } from 'react-icons/fa';
+import { FaPython, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker, FaCode, FaDatabase, FaGitAlt } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
-import { MdEmail } from 'react-icons/md';
 import { SiTypescript, SiPostgresql, SiGo, SiFlutter, SiKubernetes, SiMongodb } from 'react-icons/si';
 
-export const languageStyles: { [key: string]: { icon: any; color: string; } } = {
+interface Experience {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+}
+
+interface Technology {
+  name: string;
+  icon: IconType;
+  color: string;
+}
+
+interface UiTranslations {
+  navHome: string;
+  navProjects: string;
+  navAbout: string;
+  navResume: string;
+  heroContactBtn: string;
+  heroDownloadCvBtn: string;
+  recentProjectsTitle: string;
+  projectsSeeCodeBtn: string;
+  allProjectsBtn: string;
+  allProjectsTitle: string;
+  allProjectsDescription: string;
+  gitNoDescription: string;
+  gitSomethingWrong: string;
+  gitFailedLoad: string;
+  gitFailedDetails: string;
+  aboutTitle: string;
+  aboutSubtitle: string;
+  experienceTitle: string;
+  footerTitle: string;
+  footerDescription: string;
+  footerRights: string;
+  resumeTools: string;
+  resumeTitle: string;
+  resumeDescription: string;
+  resumeDownloadBtn: string;
+}
+
+interface TranslationContent {
+  metadata: {
+    title: string;
+    description: string;
+  };
+  title: string;
+  resume: string;
+  aboutMe: string[];
+  experiences: Experience[];
+  ui: UiTranslations
+}
+
+interface SiteConfig {
+  gitapi: string,
+  personalData: {
+    name: string;
+    email: string;
+    phone: string;
+  };
+  socialLinks: {
+    github: string;
+    linkedin: string;
+    whatsapp: string;
+    email: string;
+  };
+  technologies: Technology[];
+  translations: {
+    pt: TranslationContent;
+    en: TranslationContent;
+  };
+}
+
+export const languageStyles: { [key: string]: { icon: IconType; color: string; } } = {
   JavaScript: { icon: IoLogoJavascript, color: "#F7DF1E" },
   TypeScript: { icon: BiLogoTypescript, color: "#3178C6" },
   Go: { icon: BiLogoGoLang, color: "#00ADD8" },
@@ -14,8 +87,8 @@ export const languageStyles: { [key: string]: { icon: any; color: string; } } = 
   default: { icon: FaCode, color: "gray.500" },
 };
 
-export const siteConfig = {
-  gitapi: "https://api.github.com/users/Llocus",
+export const siteConfig: SiteConfig = {
+    gitapi: "https://api.github.com/users/Llocus",
     personalData: {
     name: "Victor Hugo Camerro",
     email: "vh.camerro@gmail.com",

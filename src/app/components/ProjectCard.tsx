@@ -14,7 +14,7 @@ interface ProjectCardProps {
   imageUrl?: string;
 }
 
-export const ProjectCard = ({ title, description, tags, repoUrl, liveUrl, imageUrl }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, tags, repoUrl, imageUrl }: ProjectCardProps) => {
   const language = tags && tags.length > 0 ? tags[0] : 'default';
   const style = languageStyles[language] || languageStyles.default;
 

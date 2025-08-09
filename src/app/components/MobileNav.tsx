@@ -8,7 +8,7 @@ import { Locale } from "../utils/dictionaries";
 interface MobileNavProps {
   lang: Locale;
   uiTranslations: {
-    navHome: any;
+    navHome: string;
     navProjects: string;
     navAbout: string;
     navResume: string;

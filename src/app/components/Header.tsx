@@ -15,7 +15,7 @@ interface HeaderProps {
   };
 }
 
-export const Header = ({ lang, uiTranslations }: HeaderProps) => {
+export const Header = ({ uiTranslations }: HeaderProps) => {
   return (
     <Flex 
       as="header" 

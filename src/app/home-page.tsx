@@ -84,7 +84,7 @@ export default function HomePage({ user, repos, dictionary }: HomePageProps) {
             {dictionary.ui.experienceTitle}
          </TextDecryptOnScroll>
          <VStack spacing={8} align="stretch" w={{ base: '100%', lg: '80%' }}>
-           {experiences.map((exp: any, index: any) => (
+           {experiences.map((exp, index) => (
              <Box 
                key={index}
                p={6}
