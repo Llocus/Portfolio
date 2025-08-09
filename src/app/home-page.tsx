@@ -137,7 +137,7 @@ export default function HomePage({ user, repos, dictionary }: HomePageProps) {
                     {dictionary.ui.aboutSubtitle}
                   </TextDecryptOnScroll>
                   {dictionary.aboutMe.map((paragraph, index) => (
-                    <span color="gray.300">
+                    <span key={index} color="gray.300">
                       {paragraph}
                     </span>
                   ))}
