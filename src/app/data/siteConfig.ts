@@ -127,7 +127,7 @@ export const siteConfig: SiteConfig = {
       title: "Desenvolvedor FullStack | Engenheiro de Software",
       aboutMe: [
         "Engenheiro de software, muito dedicado e apaixonado pela arte da codificação, na busca de soluções aos problemas.",
-        "Com base sólida na Ciência da Computação e muita criativa, tenho como desafios transformar problemas em soluções.",
+        "Com base sólida na Ciência da Computação e muita criatividade, tenho como desafios transformar problemas em soluções.",
         "Minha trajetória vai de projetos de automação, como freelancer, a desenvolvimento de sistemas robustos em ambientes corporativos; mediante stacks modernas e DevOps.",
         "Ciente dos novos desafios tecnológicos, vivo incessantemente em busca de novos conhecimentos."
       ],
