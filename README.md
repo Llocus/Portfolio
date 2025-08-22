@@ -33,7 +33,7 @@ Siga estes passos simples para criar o seu próprio portfólio:
 Primeiro, clone este repositório para a sua máquina local:
 
 ```bash
-git clone [https://github.com/Llocus/Portfolio.git](https://github.com/Llocus/Portfolio.git)
+git clone https://github.com/Llocus/Portfolio
 cd Portfolio
 ```
 
