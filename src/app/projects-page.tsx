@@ -39,13 +39,14 @@ export default function ProjectsPageClient({ repos, dictionary }: ProjetosPagePr
 
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8} w="100%">
           {repos.map((repo) => (
-            <ProjectCard 
-              key={repo.id} 
+            <ProjectCard
+              key={repo.id}
               title={repo.name}
               description={repo.description}
               tags={[repo.language]}
               repoUrl={repo.html_url}
               liveUrl={repo.homepage}
+              dictionary={dictionary}
             />
           ))}
         </SimpleGrid>
