@@ -74,6 +74,7 @@ interface SiteConfig {
   translations: {
     pt: TranslationContent;
     en: TranslationContent;
+    es: TranslationContent;
   };
 }
 
@@ -88,8 +89,8 @@ export const languageStyles: { [key: string]: { icon: IconType; color: string; }
 };
 
 export const siteConfig: SiteConfig = {
-    gitapi: "https://api.github.com/users/Llocus",
-    personalData: {
+  gitapi: "https://api.github.com/users/Llocus",
+  personalData: {
     name: "Victor Hugo Camerro",
     email: "vh.camerro@gmail.com",
     phone: "5517996501023",
@@ -181,7 +182,7 @@ export const siteConfig: SiteConfig = {
       }
     },
     en: {
-       metadata: {
+      metadata: {
         title: "Victor Hugo Camerro - FullStack Developer",
         description: "Portfolio of Victor Hugo Camerro",
       },
@@ -239,6 +240,67 @@ export const siteConfig: SiteConfig = {
         resumeTitle: "Career and Skills",
         resumeDescription: "My journey in software development and the technologies I master.",
         resumeDownloadBtn: "Download CV as PDF",
+      }
+    },
+    es: {
+      metadata: {
+        title: "Victor Hugo Camerro - Desarrollador FullStack",
+        description: "Portafolio de Victor Hugo Camerro"
+      },
+      title: "Desarrollador FullStack | Ingeniero de Software",
+      aboutMe: [
+        "Ingeniero de software, dedicado y apasionado por el arte de la codificación, en busca de soluciones a los problemas.",
+        "Con una sólida base en Ciencias de la Computación y una mente creativa, asumo el desafío de transformar problemas en soluciones.",
+        "Mi carrera abarca desde proyectos de automatización como freelancer hasta el desarrollo de sistemas robustos en entornos corporativos, utilizando stacks modernos y DevOps.",
+        "Consciente de los nuevos desafíos tecnológicos, estoy en una búsqueda incesante de nuevos conocimientos."
+      ],
+      resume: "/Curriculum_Victor.pdf",
+      experiences: [
+        {
+          role: "Desarrollador FullStack",
+          company: "Atlas",
+          period: "Junio, 2022 - Noviembre, 2023",
+          description: "Desarrollo con React, NodeJS, MongoDB, Docker, RabbitMQ, Kubernetes y Git."
+        },
+        {
+          role: "Desarrollador Frontend Júnior",
+          company: "Convertize",
+          period: "Octubre, 2021 - Enero, 2022",
+          description: "Desarrollo con React, Javascript y Django."
+        },
+        {
+          role: "Freelancer",
+          company: "Autónomo",
+          period: "Noviembre, 2020 - Octubre, 2021",
+          description: "Desarrollo de proyectos de automatización (Python), configuración de servidores (API) y desarrollo de sitios y sistemas (React, Javascript)."
+        }
+      ],
+      ui: {
+        navHome: "Inicio",
+        navProjects: "Proyectos",
+        navAbout: "Sobre Mí",
+        navResume: "Currículum",
+        heroContactBtn: "Contactar",
+        heroDownloadCvBtn: "Descargar CV",
+        recentProjectsTitle: "Proyectos Recientes",
+        projectsSeeCodeBtn: "Ver Código",
+        allProjectsBtn: "Ver Todos los Proyectos",
+        allProjectsTitle: "Todos los Proyectos",
+        allProjectsDescription: "Una colección completa de mis repositorios públicos en GitHub.",
+        gitNoDescription: "Repositorio sin descripción disponible.",
+        gitSomethingWrong: "¡Ups! Algo salió mal.",
+        gitFailedLoad: "No se pudieron cargar los datos de GitHub.",
+        gitFailedDetails: "Esto puede deberse al límite de solicitudes de la API. Por favor, inténtelo de nuevo más tarde.",
+        aboutTitle: "Sobre Mí & Habilidades",
+        aboutSubtitle: "Un Poco Sobre Mi Trayectoria",
+        experienceTitle: "Experiencia Profesional",
+        footerTitle: "¡Conectemos!",
+        footerDescription: "No dudes en ponerte en contacto.",
+        footerRights: "Todos los derechos reservados.",
+        resumeTools: "Tecnologías y Herramientas",
+        resumeTitle: "Carrera y Competencias",
+        resumeDescription: "Mi trayectoria en el desarrollo de software y las tecnologías que domino.",
+        resumeDownloadBtn: "Descargar CV en PDF"
       }
     }
   }
