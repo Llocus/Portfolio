@@ -36,9 +36,10 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  const currentLocale = lang as Locale;
 
   return (
     <html lang={lang}>
@@ -49,7 +50,7 @@ export default async function RootLayout({
       </head>
       <body>
         <Providers>
-          <TranslatedAgeVerificationCamera lang={lang} />
+          <TranslatedAgeVerificationCamera lang={currentLocale} />
           <AnimatedBackground />
           <Box
             minH="100vh"
@@ -58,12 +59,12 @@ export default async function RootLayout({
             color="white"
             position="relative"
           >
-            <TranslatedHeader lang={lang} />
-            <TranslatedMobileNav lang={lang} />
+            <TranslatedHeader lang={currentLocale} />
+            <TranslatedMobileNav lang={currentLocale} />
             <Box as="main" flex="1">
               {children}
             </Box>
-            <TranslatedFooter lang={lang} />
+            <TranslatedFooter lang={currentLocale} />
           </Box>
         </Providers>
       </body>
