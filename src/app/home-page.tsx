@@ -79,8 +79,8 @@ export default function HomePage({ user, repos, dictionary }: HomePageProps) {
           </VStack>
         </VStack>
       </Flex>
-
       <VStack as="section" id="experience" w="100%" spacing={8} py={20}>
+        <br />
         <TextDecryptOnScroll as="h2" fontSize={{ base: '2xl', md: '3xl' }} fontWeight="bold">
           {dictionary.ui.experienceTitle}
         </TextDecryptOnScroll>

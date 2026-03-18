@@ -43,6 +43,25 @@ interface UiTranslations {
   resumeTitle: string;
   resumeDescription: string;
   resumeDownloadBtn: string;
+  ageModalTitle: string;
+  ageModalSubtitle: string;
+  ageModalPrivacy: string;
+  ageModalLoading: string;
+  ageModalStartBtn: string;
+  ageModalCancelBtn: string;
+  ageModalExitBtn: string;
+  ageModalSuccessTitle: string;
+  ageModalSuccessDesc: string;
+  ageModalStatusReady: string;
+  ageModalStatusSearching: string;
+  ageModalStatusApproach: string;
+  ageModalStatusUnderage: string;
+  ageModalErrorCamera: string;
+  ageModalErrorIA: string;
+  ageModalTextScan: string;
+  ageModalTextValidating: string;
+  ageModalTextAge: string;
+  ageModalTextYears: string;
 }
 
 interface TranslationContent {
@@ -135,22 +154,28 @@ export const siteConfig: SiteConfig = {
       resume: "/Curriculo_Victor.pdf",
       experiences: [
         {
-          role: 'Desenvolvedor FullStack',
+          role: 'Engenheiro de Software Independente',
+          company: 'Freelancer / Autônomo',
+          period: 'Novembro, 2023 - Presente',
+          description: 'Liderança no desenvolvimento de aplicações full-stack utilizando Golang e React. Criação da plataforma Bitsolo, implementando conteinerização com Docker, e integração de APIs RESTful personalizadas.',
+        },
+        {
+          role: 'Desenvolvedor Full-Stack',
           company: 'Atlas',
           period: 'Junho, 2022 - Novembro, 2023',
-          description: 'Desenvolvimento com React, NodeJS, MongoDB, Docker, RabbitMQ, Kubernetes e Git.',
+          description: 'Desenvolvimento de plataforma de gestão de riscos e logística com interfaces complexas em React. Orquestração de microsserviços de backend com Node.js, MongoDB, RabbitMQ, Docker e Kubernetes.',
         },
         {
-          role: 'Desenvolvedor Frontend Júnior',
+          role: 'Desenvolvedor Frontend',
           company: 'Convertize',
           period: 'Outubro, 2021 - Janeiro, 2022',
-          description: 'Desenvolvimento com React, Javascript e Django.',
+          description: 'Desenvolvimento de interfaces de e-commerce responsivas e integração otimizada entre componentes visuais React e APIs em Django.',
         },
         {
-          role: 'Freelancer',
-          company: 'Autônomo',
+          role: 'Desenvolvedor de Software',
+          company: 'Freelancer',
           period: 'Novembro, 2020 - Outubro, 2021',
-          description: 'Desenvolvimento de projetos de automação (Python), configuração de servidores (API) e desenvolvimento de sites e sistemas (React, Javascript).',
+          description: 'Desenvolvimento de scripts em Python para automação web e criação de aplicações web completas conectando interfaces React com servidores de automação.',
         }
       ],
       ui: {
@@ -179,6 +204,26 @@ export const siteConfig: SiteConfig = {
         resumeTitle: "Carreira e Competências",
         resumeDescription: "Minha jornada no desenvolvimento de software e as tecnologias que domino.",
         resumeDownloadBtn: "Baixar Currículo em PDF",
+
+        ageModalTitle: "Verificação de Idade",
+        ageModalSubtitle: "Por favor, posicione seu rosto na câmera.",
+        ageModalPrivacy: "Nenhuma imagem é salva.",
+        ageModalLoading: "Carregando Módulos...",
+        ageModalStartBtn: "Verificar com Câmera",
+        ageModalCancelBtn: "Cancelar",
+        ageModalExitBtn: "Sair do Site",
+        ageModalSuccessTitle: "Acesso Liberado",
+        ageModalSuccessDesc: "Entrando...",
+        ageModalStatusReady: "IA Pronta. Inicie a verificação.",
+        ageModalStatusSearching: "Buscando rosto...",
+        ageModalStatusApproach: "Aproxime-se",
+        ageModalStatusUnderage: "Idade detectada inferior a 18 anos.",
+        ageModalErrorCamera: "Acesso à câmera negado.",
+        ageModalErrorIA: "Falha no carregamento da IA.",
+        ageModalTextScan: "Escaneando...",
+        ageModalTextValidating: "Validando",
+        ageModalTextAge: "Idade",
+        ageModalTextYears: "anos"
       }
     },
     en: {
@@ -196,22 +241,28 @@ export const siteConfig: SiteConfig = {
       resume: "/Resume_Victor.pdf",
       experiences: [
         {
-          role: 'FullStack Developer',
+          role: 'Independent Software Engineer',
+          company: 'Freelance / Self-Employed',
+          period: 'November, 2023 - Present',
+          description: 'Spearheaded full-stack application development leveraging Golang and React. Engineered the Bitsolo platform utilizing Docker containerization and integrated custom RESTful APIs.',
+        },
+        {
+          role: 'Full-Stack Developer',
           company: 'Atlas',
           period: 'June, 2022 - November, 2023',
-          description: 'Development with React, NodeJS, MongoDB, Docker, RabbitMQ, Kubernetes, and Git.',
+          description: 'Architected a risk management and logistics platform with complex interactive interfaces using React. Orchestrated backend microservices utilizing Node.js, MongoDB, RabbitMQ, Docker, and Kubernetes.',
         },
         {
-          role: 'Junior Frontend Developer',
+          role: 'Frontend Developer',
           company: 'Convertize',
           period: 'October, 2021 - January, 2022',
-          description: 'Development with React, Javascript, and Django.',
+          description: 'Delivered responsive e-commerce interfaces and executed seamless integration between React visual components and Django APIs.',
         },
         {
-          role: 'Freelancer',
-          company: 'Self-employed',
+          role: 'Software Developer',
+          company: 'Freelance',
           period: 'November, 2020 - October, 2021',
-          description: 'Developed automation projects (Python), configured servers (API), and built websites and systems (React, Javascript).',
+          description: 'Built custom Python scripts for web automation and constructed end-to-end web applications connecting robust React interfaces with automation servers.',
         }
       ],
       ui: {
@@ -240,6 +291,26 @@ export const siteConfig: SiteConfig = {
         resumeTitle: "Career and Skills",
         resumeDescription: "My journey in software development and the technologies I master.",
         resumeDownloadBtn: "Download CV as PDF",
+
+        ageModalTitle: "Age Verification",
+        ageModalSubtitle: "Please position your face in the camera.",
+        ageModalPrivacy: "No images are saved.",
+        ageModalLoading: "Loading Modules...",
+        ageModalStartBtn: "Verify with Camera",
+        ageModalCancelBtn: "Cancel",
+        ageModalExitBtn: "Leave Site",
+        ageModalSuccessTitle: "Access Granted",
+        ageModalSuccessDesc: "Entering...",
+        ageModalStatusReady: "AI Ready. Start verification.",
+        ageModalStatusSearching: "Searching for face...",
+        ageModalStatusApproach: "Move closer",
+        ageModalStatusUnderage: "Detected age is under 18.",
+        ageModalErrorCamera: "Camera access denied.",
+        ageModalErrorIA: "Failed to load AI models.",
+        ageModalTextScan: "Scanning...",
+        ageModalTextValidating: "Validating",
+        ageModalTextAge: "Age",
+        ageModalTextYears: "years"
       }
     },
     es: {
@@ -257,22 +328,28 @@ export const siteConfig: SiteConfig = {
       resume: "/Curriculum_Victor.pdf",
       experiences: [
         {
-          role: "Desarrollador FullStack",
+          role: "Ingeniero de Software Independiente",
+          company: "Freelancer / Autónomo",
+          period: "Noviembre, 2023 - Presente",
+          description: "Liderazgo en el desarrollo de aplicaciones full-stack utilizando Golang y React. Creación de la plataforma Bitsolo, implementando contenedorización con Docker, e integración de APIs RESTful personalizadas."
+        },
+        {
+          role: "Desarrollador Full-Stack",
           company: "Atlas",
           period: "Junio, 2022 - Noviembre, 2023",
-          description: "Desarrollo con React, NodeJS, MongoDB, Docker, RabbitMQ, Kubernetes y Git."
+          description: "Desarrollo de plataforma de gestión de riesgos y logística con interfaces complejas en React. Orquestación de microservicios de backend con Node.js, MongoDB, RabbitMQ, Docker y Kubernetes."
         },
         {
-          role: "Desarrollador Frontend Júnior",
+          role: "Desarrollador Frontend",
           company: "Convertize",
           period: "Octubre, 2021 - Enero, 2022",
-          description: "Desarrollo con React, Javascript y Django."
+          description: "Desarrollo de interfaces de comercio electrónico responsivas e integración optimizada entre componentes visuales de React y APIs en Django."
         },
         {
-          role: "Freelancer",
-          company: "Autónomo",
+          role: "Desarrollador de Software",
+          company: "Freelancer",
           period: "Noviembre, 2020 - Octubre, 2021",
-          description: "Desarrollo de proyectos de automatización (Python), configuración de servidores (API) y desarrollo de sitios y sistemas (React, Javascript)."
+          description: "Desarrollo de scripts en Python para automatización web y creación de aplicaciones web completas conectando interfaces React con servidores de automatización."
         }
       ],
       ui: {
@@ -300,7 +377,27 @@ export const siteConfig: SiteConfig = {
         resumeTools: "Tecnologías y Herramientas",
         resumeTitle: "Carrera y Competencias",
         resumeDescription: "Mi trayectoria en el desarrollo de software y las tecnologías que domino.",
-        resumeDownloadBtn: "Descargar CV en PDF"
+        resumeDownloadBtn: "Descargar CV en PDF",
+
+        ageModalTitle: "Verificación de edad",
+        ageModalSubtitle: "Por favor, posiciona tu rostro en la cámara.",
+        ageModalPrivacy: "No se guardan imágenes.",
+        ageModalLoading: "Cargando Módulos...",
+        ageModalStartBtn: "Verificar con Cámara",
+        ageModalCancelBtn: "Cancelar",
+        ageModalExitBtn: "Salir del Sitio",
+        ageModalSuccessTitle: "Acceso Permitido",
+        ageModalSuccessDesc: "Entrando...",
+        ageModalStatusReady: "IA Lista. Inicie la verificación.",
+        ageModalStatusSearching: "Buscando rostro...",
+        ageModalStatusApproach: "Acércate",
+        ageModalStatusUnderage: "La edad detectada es menor de 18 años.",
+        ageModalErrorCamera: "Acceso a la cámara denegado.",
+        ageModalErrorIA: "Error al cargar los modelos de IA.",
+        ageModalTextScan: "Escaneando...",
+        ageModalTextValidating: "Validando",
+        ageModalTextAge: "Edad",
+        ageModalTextYears: "años"
       }
     }
   }

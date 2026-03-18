@@ -8,14 +8,18 @@ import { i18n } from "../../i18n-config";
 import type { Metadata } from 'next';
 import { AnimatedBackground } from "../components/AnimatedBackground";
 import { siteConfig } from "../data/siteConfig";
+import { TranslatedAgeVerificationCamera } from "../components/TranslatedAgeVerificationCamera";
 
-export async function generateMetadata({
-  params: { lang },
-}: {
-  params: { lang: Locale };
+export async function generateMetadata(props: {
+  params: Promise<{ lang: Locale }>;
 }): Promise<Metadata> {
-  const metadata = siteConfig.translations[lang]?.metadata || siteConfig.translations.pt.metadata;
-  
+  const params = await props.params;
+  const lang = params.lang;
+
+  const metadata =
+    siteConfig.translations[lang]?.metadata ||
+    siteConfig.translations.pt.metadata;
+
   return {
     title: metadata.title,
     description: metadata.description,
@@ -27,14 +31,14 @@ export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
-  const { lang } = params;
+  const { lang } = await params;
 
   return (
     <html lang={lang}>
@@ -45,10 +49,11 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
+          <TranslatedAgeVerificationCamera lang={lang} />
           <AnimatedBackground />
-          <Box 
-            minH="100vh" 
-            display="flex" 
+          <Box
+            minH="100vh"
+            display="flex"
             flexDirection="column"
             color="white"
             position="relative"
