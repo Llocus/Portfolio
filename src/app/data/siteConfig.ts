@@ -62,6 +62,7 @@ interface UiTranslations {
   ageModalTextValidating: string;
   ageModalTextAge: string;
   ageModalTextYears: string;
+  ageModalTextSkipVerification: string;
 }
 
 interface TranslationContent {
@@ -223,7 +224,8 @@ export const siteConfig: SiteConfig = {
         ageModalTextScan: "Escaneando...",
         ageModalTextValidating: "Validando",
         ageModalTextAge: "Idade",
-        ageModalTextYears: "anos"
+        ageModalTextYears: "anos",
+        ageModalTextSkipVerification: "Pular verificação"
       }
     },
     en: {
@@ -310,7 +312,8 @@ export const siteConfig: SiteConfig = {
         ageModalTextScan: "Scanning...",
         ageModalTextValidating: "Validating",
         ageModalTextAge: "Age",
-        ageModalTextYears: "years"
+        ageModalTextYears: "years",
+        ageModalTextSkipVerification: "Skip verification"
       }
     },
     es: {
@@ -397,7 +400,8 @@ export const siteConfig: SiteConfig = {
         ageModalTextScan: "Escaneando...",
         ageModalTextValidating: "Validando",
         ageModalTextAge: "Edad",
-        ageModalTextYears: "años"
+        ageModalTextYears: "años",
+        ageModalTextSkipVerification: "Omitir verificación"
       }
     }
   }

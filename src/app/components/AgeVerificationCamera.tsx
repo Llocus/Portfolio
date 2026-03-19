@@ -26,6 +26,7 @@ interface AgeVerificationProps {
         ageModalTextValidating: string;
         ageModalTextAge: string;
         ageModalTextYears: string;
+        ageModalTextSkipVerification: string;
     };
 }
 
@@ -275,6 +276,13 @@ export default function AgeVerificationModal({ uiTranslations }: AgeVerification
         return () => clearInterval(interval);
     }, [isModelsLoaded, isCameraStarted, isVerified, stopVideo, uiTranslations]);
 
+    const finishVerification = () => {
+        Cookies.set('ageVerified', 'true', { expires: 30 });
+        setIsVerified(true);
+        stopVideo();
+        setTimeout(() => { setIsOpen(false); document.body.style.overflow = 'auto'; }, 2500);
+    }
+
     if (!mounted || !isOpen) return null;
 
     return (
@@ -383,6 +391,10 @@ export default function AgeVerificationModal({ uiTranslations }: AgeVerification
                                 {uiTranslations.ageModalCancelBtn}
                             </Button>
                         )}
+
+                        <Button variant="outline" size="sm" mt={10} onClick={finishVerification}>
+                            {uiTranslations.ageModalTextSkipVerification}
+                        </Button>
                     </VStack>
                 )}
             </Box>
