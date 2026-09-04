@@ -8,7 +8,6 @@ import { i18n } from "../../i18n-config";
 import type { Metadata } from 'next';
 import { AnimatedBackground } from "../components/AnimatedBackground";
 import { siteConfig } from "../data/siteConfig";
-import { TranslatedAgeVerificationCamera } from "../components/TranslatedAgeVerificationCamera";
 
 export async function generateMetadata(props: {
   params: Promise<{ lang: Locale }>;
@@ -50,7 +49,6 @@ export default async function RootLayout({
       </head>
       <body>
         <Providers>
-          <TranslatedAgeVerificationCamera lang={currentLocale} />
           <AnimatedBackground />
           <Box
             minH="100vh"

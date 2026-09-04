@@ -43,26 +43,6 @@ interface UiTranslations {
   resumeTitle: string;
   resumeDescription: string;
   resumeDownloadBtn: string;
-  ageModalTitle: string;
-  ageModalSubtitle: string;
-  ageModalPrivacy: string;
-  ageModalLoading: string;
-  ageModalStartBtn: string;
-  ageModalCancelBtn: string;
-  ageModalExitBtn: string;
-  ageModalSuccessTitle: string;
-  ageModalSuccessDesc: string;
-  ageModalStatusReady: string;
-  ageModalStatusSearching: string;
-  ageModalStatusApproach: string;
-  ageModalStatusUnderage: string;
-  ageModalErrorCamera: string;
-  ageModalErrorIA: string;
-  ageModalTextScan: string;
-  ageModalTextValidating: string;
-  ageModalTextAge: string;
-  ageModalTextYears: string;
-  ageModalTextSkipVerification: string;
 }
 
 interface TranslationContent {
@@ -204,28 +184,7 @@ export const siteConfig: SiteConfig = {
         resumeTools: "Tecnologias e Ferramentas",
         resumeTitle: "Carreira e Competências",
         resumeDescription: "Minha jornada no desenvolvimento de software e as tecnologias que domino.",
-        resumeDownloadBtn: "Baixar Currículo em PDF",
-
-        ageModalTitle: "Verificação de Idade",
-        ageModalSubtitle: "Por favor, posicione seu rosto na câmera.",
-        ageModalPrivacy: "Nenhuma imagem é salva.",
-        ageModalLoading: "Carregando Módulos...",
-        ageModalStartBtn: "Verificar com Câmera",
-        ageModalCancelBtn: "Cancelar",
-        ageModalExitBtn: "Sair do Site",
-        ageModalSuccessTitle: "Acesso Liberado",
-        ageModalSuccessDesc: "Entrando...",
-        ageModalStatusReady: "IA Pronta. Inicie a verificação.",
-        ageModalStatusSearching: "Buscando rosto...",
-        ageModalStatusApproach: "Aproxime-se",
-        ageModalStatusUnderage: "Idade detectada inferior a 18 anos.",
-        ageModalErrorCamera: "Acesso à câmera negado.",
-        ageModalErrorIA: "Falha no carregamento da IA.",
-        ageModalTextScan: "Escaneando...",
-        ageModalTextValidating: "Validando",
-        ageModalTextAge: "Idade",
-        ageModalTextYears: "anos",
-        ageModalTextSkipVerification: "Pular verificação"
+        resumeDownloadBtn: "Baixar Currículo em PDF"
       }
     },
     en: {
@@ -292,28 +251,7 @@ export const siteConfig: SiteConfig = {
         resumeTools: "Tecnologies and Tools",
         resumeTitle: "Career and Skills",
         resumeDescription: "My journey in software development and the technologies I master.",
-        resumeDownloadBtn: "Download CV as PDF",
-
-        ageModalTitle: "Age Verification",
-        ageModalSubtitle: "Please position your face in the camera.",
-        ageModalPrivacy: "No images are saved.",
-        ageModalLoading: "Loading Modules...",
-        ageModalStartBtn: "Verify with Camera",
-        ageModalCancelBtn: "Cancel",
-        ageModalExitBtn: "Leave Site",
-        ageModalSuccessTitle: "Access Granted",
-        ageModalSuccessDesc: "Entering...",
-        ageModalStatusReady: "AI Ready. Start verification.",
-        ageModalStatusSearching: "Searching for face...",
-        ageModalStatusApproach: "Move closer",
-        ageModalStatusUnderage: "Detected age is under 18.",
-        ageModalErrorCamera: "Camera access denied.",
-        ageModalErrorIA: "Failed to load AI models.",
-        ageModalTextScan: "Scanning...",
-        ageModalTextValidating: "Validating",
-        ageModalTextAge: "Age",
-        ageModalTextYears: "years",
-        ageModalTextSkipVerification: "Skip verification"
+        resumeDownloadBtn: "Download CV as PDF"
       }
     },
     es: {
@@ -380,28 +318,7 @@ export const siteConfig: SiteConfig = {
         resumeTools: "Tecnologías y Herramientas",
         resumeTitle: "Carrera y Competencias",
         resumeDescription: "Mi trayectoria en el desarrollo de software y las tecnologías que domino.",
-        resumeDownloadBtn: "Descargar CV en PDF",
-
-        ageModalTitle: "Verificación de edad",
-        ageModalSubtitle: "Por favor, posiciona tu rostro en la cámara.",
-        ageModalPrivacy: "No se guardan imágenes.",
-        ageModalLoading: "Cargando Módulos...",
-        ageModalStartBtn: "Verificar con Cámara",
-        ageModalCancelBtn: "Cancelar",
-        ageModalExitBtn: "Salir del Sitio",
-        ageModalSuccessTitle: "Acceso Permitido",
-        ageModalSuccessDesc: "Entrando...",
-        ageModalStatusReady: "IA Lista. Inicie la verificación.",
-        ageModalStatusSearching: "Buscando rostro...",
-        ageModalStatusApproach: "Acércate",
-        ageModalStatusUnderage: "La edad detectada es menor de 18 años.",
-        ageModalErrorCamera: "Acceso a la cámara denegado.",
-        ageModalErrorIA: "Error al cargar los modelos de IA.",
-        ageModalTextScan: "Escaneando...",
-        ageModalTextValidating: "Validando",
-        ageModalTextAge: "Edad",
-        ageModalTextYears: "años",
-        ageModalTextSkipVerification: "Omitir verificación"
+        resumeDownloadBtn: "Descargar CV en PDF"
       }
     }
   }
